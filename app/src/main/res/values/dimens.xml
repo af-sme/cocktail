@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="list_item_height">56dp</dimen>
+    <dimen name="list_item_horizontal_padding">16dp</dimen>
+    <dimen name="list_item_image_size">40dp</dimen>
+    <dimen name="list_item_action_size">48dp</dimen>
+    <dimen name="list_vertical_padding">8dp</dimen>
+    <dimen name="common_padding">16dp</dimen>
+</resources>
