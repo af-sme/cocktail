@@ -7,8 +7,8 @@
         <item name="colorPrimary">@color/indigo</item>
         <item name="colorPrimaryVariant">@color/indigo_dark</item>
         <item name="colorOnPrimary">@color/white</item>
-        <item name="colorSecondary">@color/amber</item>
-        <item name="colorSecondaryVariant">@color/amber_dark</item>
+        <item name="colorSecondary">@color/deep_orange</item>
+        <item name="colorSecondaryVariant">@color/deep_orange_dark</item>
         <item name="colorOnSecondary">@color/white</item>
         <item name="colorSurface">@color/white</item>
         <item name="colorOnSurface">@color/black</item>

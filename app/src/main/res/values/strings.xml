@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">TheCocktailDB Demo</string>
 
+    <string name="login_title">TheCocktailDB Demo Login</string>
+
     <string name="bottom_nav_favorites_title">Favorites</string>
     <string name="bottom_nav_ingredients_title">Ingredients</string>
     <string name="bottom_nav_categories_title">Categories</string>
@@ -16,5 +18,10 @@
     <string name="content_description_photo_of_drink">Photo of drink</string>
 
     <string name="retry">Retry</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+
+    <string name="invalid_creds">Invalid email and/or password</string>
 
 </resources>

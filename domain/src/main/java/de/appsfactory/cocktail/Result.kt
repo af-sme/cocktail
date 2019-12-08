@@ -11,6 +11,7 @@ class Error(
     enum class Reason {
         NO_INTERNET,
         API_ERROR,
+        INVALID_CREDS,
         API_MODEL_PARSING,
         UNKNOWN
     }

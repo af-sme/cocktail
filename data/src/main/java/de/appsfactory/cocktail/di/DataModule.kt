@@ -23,6 +23,7 @@ val dataModule = module {
     single<IngredientRepository> { IngredientRemoteRepository(get(), get()) }
     single<DrinkRepository> { DrinkComposeRepository(get(), get(), get()) }
     single<DetailedDrinkRepository> { DetailedDrinkComposeRepository(get(), get(), get()) }
+    single<LoginRepository> { LoginRemoteRepository(get()) }
     single { provideRestService() }
     single { provideConnectivity(androidContext()) }
     single { provideDatabase(androidContext()) }

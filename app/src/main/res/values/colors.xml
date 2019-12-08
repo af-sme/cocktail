@@ -6,6 +6,8 @@
     <color name="indigo_dark">#303f9f</color>
     <color name="amber">#ffc107</color>
     <color name="amber_dark">#c79100</color>
+    <color name="deep_orange">#ff5722</color>
+    <color name="deep_orange_dark">#c41c00</color>
     <color name="white">#ffffff</color>
     <color name="black">#000000</color>
     <color name="transparent_indigo_dark">#a8303f9f</color>
