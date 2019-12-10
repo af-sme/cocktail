@@ -1,8 +1,6 @@
 package de.appsfactory.cocktail
 
 import android.Manifest
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import androidx.test.espresso.Espresso.closeSoftKeyboard
 import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.action.ViewActions
@@ -12,7 +10,6 @@ import androidx.test.filters.LargeTest
 import androidx.test.rule.ActivityTestRule
 import androidx.test.rule.GrantPermissionRule
 import com.azimolabs.conditionwatcher.ConditionWatcher
-import com.azimolabs.conditionwatcher.Instruction
 import de.appsfactory.cocktail.login.LoginActivity
 import org.junit.Rule
 import org.junit.Test
@@ -54,15 +51,4 @@ class LoginScreenTest {
         makeScreenshot("successfulLoginTest")
     }
 
-    private class ItemsLoaded : Instruction() {
-        override fun getDescription(): String {
-            return "Items loaded"
-        }
-
-        override fun checkCondition(): Boolean {
-            val itemsRecyclerView =
-                getCurrentActivity()?.findViewById<RecyclerView>(R.id.itemsRecyclerView)
-            return itemsRecyclerView != null && itemsRecyclerView.childCount > 5
-        }
-    }
 }

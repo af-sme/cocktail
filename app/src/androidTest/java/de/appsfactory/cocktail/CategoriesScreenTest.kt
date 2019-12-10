@@ -28,7 +28,7 @@ import org.junit.Test
 
 
 @LargeTest
-class WalkthroughTest {
+class CategoriesScreenTest {
 
     @Rule
     @JvmField
@@ -43,7 +43,6 @@ class WalkthroughTest {
 
     @Test
     fun categoriesTest() {
-
         //Login screen
         onView(withId(R.id.emailEditText)).perform(typeText(Const.EMAIL))
         onView(withId(R.id.passwordEditText)).perform(typeText(Const.PASSWORD))
@@ -83,19 +82,8 @@ class WalkthroughTest {
 
         onView(withId(R.id.favoriteImageView)).perform(click())
         makeScreenshot("07_drink_b-52")
-    }
 
-    private class ItemsLoaded : Instruction() {
-        override fun getDescription(): String {
-            return "Items loaded"
-        }
 
-        override fun checkCondition(): Boolean {
-            val itemsRecyclerView =
-                getCurrentActivity()?.findViewById<RecyclerView>(R.id.itemsRecyclerView)
-            return itemsRecyclerView != null &&
-                    (itemsRecyclerView.layoutManager as LinearLayoutManager).findLastCompletelyVisibleItemPosition() > 2
-        }
     }
 
     private class CategoryVisible(private val name: String) : Instruction() {
