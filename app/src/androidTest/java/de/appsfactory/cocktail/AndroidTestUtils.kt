@@ -8,7 +8,7 @@ import androidx.test.uiautomator.UiDevice
 import java.io.File
 import java.text.SimpleDateFormat
 
-private val formatter = SimpleDateFormat("yyyy.MM.dd HH:mm:ss.SSS")
+private val formatter = SimpleDateFormat("yyyy.MM.dd_HHmmssSSS")
 
 fun makeScreenshot(info: String) {
     val uiDevice = UiDevice.getInstance(getInstrumentation())

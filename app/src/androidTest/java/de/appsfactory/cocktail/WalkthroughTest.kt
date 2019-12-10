@@ -42,7 +42,7 @@ class WalkthroughTest {
     val activityRule = ActivityTestRule(LoginActivity::class.java)
 
     @Test
-    fun start() {
+    fun categoriesTest() {
 
         //Login screen
         onView(withId(R.id.emailEditText)).perform(typeText(Const.EMAIL))
@@ -83,11 +83,6 @@ class WalkthroughTest {
 
         onView(withId(R.id.favoriteImageView)).perform(click())
         makeScreenshot("07_drink_b-52")
-
-        //Ingredients screen
-        onView(withId(R.id.bottom_nav_ingredients)).perform(click())
-        ConditionWatcher.waitForCondition(ItemsLoaded())
-        makeScreenshot("08_ingredients_screen")
     }
 
     private class ItemsLoaded : Instruction() {
