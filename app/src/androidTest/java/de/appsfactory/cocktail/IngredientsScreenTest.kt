@@ -2,8 +2,6 @@ package de.appsfactory.cocktail
 
 import android.Manifest
 import android.widget.TextView
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import androidx.test.espresso.Espresso.closeSoftKeyboard
 import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.action.ViewActions.click
@@ -15,11 +13,9 @@ import androidx.test.filters.LargeTest
 import androidx.test.rule.ActivityTestRule
 import androidx.test.rule.GrantPermissionRule
 import com.azimolabs.conditionwatcher.ConditionWatcher
-import com.azimolabs.conditionwatcher.Instruction
-import de.appsfactory.cocktail.category.CategoryAdapter
 import de.appsfactory.cocktail.category.CategoryViewHolder
-import de.appsfactory.cocktail.drink.DrinkAdapter
 import de.appsfactory.cocktail.drink.DrinkViewHolder
+import de.appsfactory.cocktail.ingredient.IngredientViewHolder
 import de.appsfactory.cocktail.login.LoginActivity
 import org.hamcrest.Description
 import org.hamcrest.TypeSafeMatcher
@@ -28,7 +24,7 @@ import org.junit.Test
 
 
 @LargeTest
-class CategoriesScreenTest {
+class IngredientsScreenTest {
 
     @Rule
     @JvmField
@@ -42,7 +38,7 @@ class CategoriesScreenTest {
     val activityRule = ActivityTestRule(LoginActivity::class.java)
 
     @Test
-    fun categoriesTest() {
+    fun ingredientsTest() {
         //Login screen
         onView(withId(R.id.emailEditText)).perform(typeText(Const.EMAIL))
         onView(withId(R.id.passwordEditText)).perform(typeText(Const.PASSWORD))
@@ -50,46 +46,53 @@ class CategoriesScreenTest {
 
         onView(withId(R.id.loginButton)).perform(click())
 
+        //
+        ConditionWatcher.setWatchInterval(1000)
+        ConditionWatcher.waitForCondition(NavigationVisible())
+
+        //go to ingredients
+        onView(withId(R.id.bottom_nav_ingredients)).perform(click())
+        ConditionWatcher.waitForCondition(ItemsLoaded())
         //Categories screen
         ConditionWatcher.setWatchInterval(1000)
         ConditionWatcher.waitForCondition(ItemsLoaded())
-        makeScreenshot("02_categories_screen")
+        makeScreenshot("02_ingredients_screen")
 
         //Scroll to the Beer category
         onView(withId(R.id.itemsRecyclerView))
-            .perform(scrollToHolder(CategoryMatcher("Beer")))
-        makeScreenshot("03_categories_screen_bier")
+            .perform(scrollToHolder(IngredientMatcher("Bourbon")))
+        makeScreenshot("03_ingredients_screen_bourbon")
 
         //Select shot category
         onView(withId(R.id.itemsRecyclerView))
-            .perform(actionOnHolderItem(CategoryMatcher("Shot"), click()))
+            .perform(actionOnHolderItem(IngredientMatcher("Bourbon"), click()))
         //Here we want to wait for images to be loaded
         Thread.sleep(2000)
-        makeScreenshot("04_shots_list")
+        makeScreenshot("04_bourbon_list")
 
         //Scroll to and select B-52 cocktail
         onView(withId(R.id.itemsRecyclerView))
-            .perform(scrollToHolder(DrinkMatcher("B-52")))
+            .perform(scrollToHolder(DrinkMatcher("Old Fashioned")))
         //Here we want to wait for images to be loaded
         Thread.sleep(1500)
-        makeScreenshot("05_shots_list_b-52")
+        makeScreenshot("05_bourbon_list_Old_Fashioned")
         onView(withId(R.id.itemsRecyclerView))
-            .perform(actionOnHolderItem(DrinkMatcher("B-52"), click()))
+            .perform(actionOnHolderItem(DrinkMatcher("Old Fashioned"), click()))
         //Here we want to wait for image to be loaded
         Thread.sleep(1500)
-        makeScreenshot("06_drink_b-52")
+        makeScreenshot("06_drink_Old_Fashioned")
 
         onView(withId(R.id.favoriteImageView)).perform(click())
-        makeScreenshot("07_drink_b-52")
+        makeScreenshot("07_drink_Old_Fashioned")
 
 
     }
 
-    private class CategoryMatcher(private val name: String) : TypeSafeMatcher<CategoryViewHolder>() {
+    private class IngredientMatcher(private val name: String) : TypeSafeMatcher<IngredientViewHolder>() {
         override fun describeTo(description: Description?) {}
 
-        override fun matchesSafely(item: CategoryViewHolder?): Boolean {
-            return item?.itemView?.findViewById<TextView>(R.id.categoryTextView)?.text?.toString() == name
+        override fun matchesSafely(item: IngredientViewHolder?): Boolean {
+            return item?.itemView?.findViewById<TextView>(R.id.ingredientTextView)?.text?.toString() == name
         }
     }
 
