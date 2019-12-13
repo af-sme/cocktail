@@ -51,7 +51,7 @@ class CategoriesScreenTest {
         onView(withId(R.id.loginButton)).perform(click())
 
         //Categories screen
-        ConditionWatcher.setWatchInterval(1000)
+        ConditionWatcher.setWatchInterval(500)
         ConditionWatcher.waitForCondition(ItemsLoaded())
         makeScreenshot("02_categories_screen")
 
@@ -64,6 +64,7 @@ class CategoriesScreenTest {
         onView(withId(R.id.itemsRecyclerView))
             .perform(actionOnHolderItem(CategoryMatcher("Shot"), click()))
         //Here we want to wait for images to be loaded
+        ConditionWatcher.waitForCondition(ItemsLoaded())
         Thread.sleep(2000)
         makeScreenshot("04_shots_list")
 

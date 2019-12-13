@@ -47,7 +47,7 @@ class IngredientsScreenTest {
         onView(withId(R.id.loginButton)).perform(click())
 
         //
-        ConditionWatcher.setWatchInterval(1000)
+        ConditionWatcher.setWatchInterval(500)
         ConditionWatcher.waitForCondition(NavigationVisible())
 
         //go to ingredients
@@ -66,6 +66,7 @@ class IngredientsScreenTest {
         //Select shot category
         onView(withId(R.id.itemsRecyclerView))
             .perform(actionOnHolderItem(IngredientMatcher("Bourbon"), click()))
+        ConditionWatcher.waitForCondition(ItemsLoaded())
         //Here we want to wait for images to be loaded
         Thread.sleep(2000)
         makeScreenshot("04_bourbon_list")
