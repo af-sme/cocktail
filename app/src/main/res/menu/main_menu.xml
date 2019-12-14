@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menu_add_cocktail"
+        android:icon="@drawable/ic_plus_thick_24dp"
+        android:title="@string/add_cocktail"
+        app:iconTint="@android:color/white"
+        app:showAsAction="always" />
+</menu>

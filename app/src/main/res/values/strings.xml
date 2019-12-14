@@ -23,5 +23,15 @@
     <string name="login">Login</string>
 
     <string name="invalid_creds">Invalid email and/or password</string>
+    <string name="add_cocktail">Add cocktail</string>
+    <string name="cocktail_name">Cocktail name</string>
+    <string name="name">Name</string>
+    <string name="cocktail_recipe">Cocktail recipe</string>
+    <string name="category">Category</string>
+    <string name="please_select">Please select</string>
+    <string name="ingredients">Ingredients</string>
+    <string name="alcoholic">Alcoholic</string>
+    <string name="close">Close</string>
+    <string name="done">Done</string>
 
 </resources>

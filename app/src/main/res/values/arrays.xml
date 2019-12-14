@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="glasses_array">
+        <item>Highball glass</item>
+        <item>Cocktail glass</item>
+        <item>Old-fashioned glass</item>
+        <item>Martini Glass</item>
+        <item>Collins glass</item>
+        <item>Whiskey sour glass</item>
+        <item>Champagne flute</item>
+        <item>Brandy snifter</item>
+        <item>Margarita glass</item>
+    </string-array>
+
+    <string-array name="categories_array">
+        <item>Ordinary Drink</item>
+        <item>Cocktail</item>
+        <item>Milk / Float / Shake</item>
+        <item>Other/Unknown</item>
+        <item>Cocoa</item>
+        <item>Shot</item>
+        <item>Coffee / Tea</item>
+        <item>Homemade Liqueur</item>
+        <item>Punch / Party Drink</item>
+        <item>Beer</item>
+        <item>Soft Drink / Soda</item>
+    </string-array>
+
+    <string-array name="ingredients_array">
+        <item>Light rum</item>
+        <item>Applejack</item>
+        <item>Gin</item>
+        <item>Dark rum</item>
+        <item>Sweet Vermouth</item>
+        <item>Strawberry schnapps</item>
+        <item>Scotch</item>
+        <item>Apricot brandy</item>
+        <item>Triple sec</item>
+        <item>Southern Comfort</item>
+        <item>Orange bitters</item>
+        <item>Brandy</item>
+        <item>Lemon vodka</item>
+        <item>Blended whiskey</item>
+        <item>Dry Vermouth</item>
+        <item>Amaretto</item>
+        <item>Tea</item>
+        <item>Champagne</item>
+        <item>Coffee liqueur</item>
+        <item>Bourbon</item>
+        <item>Tequila</item>
+        <item>Vodka</item>
+        <item>Añejo rum</item>
+        <item>Bitters</item>
+        <item>Sugar</item>
+        <item>Kahlua</item>
+        <item>demerara Sugar</item>
+        <item>Dubonnet Rouge</item>
+        <item>Lime juice</item>
+        <item>Irish whiskey</item>
+        <item>Apple brandy</item>
+        <item>Carbonated water</item>
+        <item>Cherry brandy</item>
+        <item>Creme de Cacao</item>
+        <item>Grenadine</item>
+        <item>Port</item>
+        <item>Coffee brandy</item>
+        <item>Red wine</item>
+        <item>Rum</item>
+        <item>Grapefruit juice</item>
+        <item>Ricard</item>
+        <item>Sherry</item>
+        <item>Cognac</item>
+        <item>Sloe gin</item>
+        <item>Apple juice</item>
+        <item>Pineapple juice</item>
+        <item>Lemon juice</item>
+        <item>Sugar syrup</item>
+        <item>Milk</item>
+        <item>Strawberries</item>
+        <item>Chocolate syrup</item>
+        <item>Yoghurt</item>
+        <item>Mango</item>
+        <item>Ginger</item>
+        <item>Lime</item>
+        <item>Cantaloupe</item>
+        <item>Berries</item>
+        <item>Grapes</item>
+        <item>Kiwi</item>
+        <item>Tomato juice</item>
+        <item>Cocoa powder</item>
+        <item>Chocolate</item>
+        <item>Heavy cream</item>
+        <item>Galliano</item>
+        <item>Peach Vodka</item>
+        <item>Ouzo</item>
+        <item>Coffee</item>
+        <item>Spiced rum</item>
+        <item>Water</item>
+        <item>Espresso</item>
+        <item>Angelica root</item>
+        <item>Orange</item>
+        <item>Cranberries</item>
+        <item>Johnnie Walker</item>
+        <item>Apple cider</item>
+        <item>Everclear</item>
+        <item>Cranberry juice</item>
+        <item>Egg yolk</item>
+        <item>Egg</item>
+        <item>Grape juice</item>
+        <item>Peach nectar</item>
+        <item>Lemon</item>
+        <item>Firewater</item>
+        <item>Lemonade</item>
+        <item>Lager</item>
+        <item>Whiskey</item>
+        <item>Absolut Citron</item>
+        <item>Pisco</item>
+        <item>Irish cream</item>
+        <item>Ale</item>
+        <item>Chocolate liqueur</item>
+        <item>Midori melon liqueur</item>
+        <item>Sambuca</item>
+        <item>Cider</item>
+        <item>Sprite</item>
+        <item>7-Up</item>
+        <item>Blackberry brandy</item>
+        <item>Peppermint schnapps</item>
+        <item>Creme de Cassis</item>
+        <item>Jack Daniels"</item>
+        <item>Salt</item>
+    </string-array>
+</resources>

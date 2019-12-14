@@ -101,7 +101,7 @@ class DetailedDrinkFragment : Fragment() {
         drinkTextView.text = drink.name
         detailsTextView.text = drink.details
         ingredientsTextView.text = drink.ingredients
-        instructionTextView.text = drink.instruction
+        instructionCaptionTextView.text = drink.instruction
         drinkImageView.load(drink.thumbUrl) {
             placeholder(R.drawable.cocktail_placeholder)
             crossfade(true)

@@ -79,7 +79,7 @@
             app:constraint_referenced_ids="detailsTextView,ingredientsTextView" />
 
         <TextView
-            android:id="@+id/instructionTextView"
+            android:id="@+id/instructionCaptionTextView"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/common_padding"
@@ -146,7 +146,7 @@
             android:id="@+id/drinkGroup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:constraint_referenced_ids="drinkImageView,drinkTextView,ingredientsTextView,detailsTextView,instructionTextView" />
+            app:constraint_referenced_ids="drinkImageView,drinkTextView,ingredientsTextView,detailsTextView,instructionCaptionTextView" />
 
         <androidx.constraintlayout.widget.Group
             android:id="@+id/troubleGroup"
